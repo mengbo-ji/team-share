@@ -1,0 +1,27 @@
+{
+  "name": "react-ts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "webpack-builder-react-xd dev --stats",
+    "build": "webpack-builder-react-xd build --stats"
+  },
+  "builder-config": {
+    "typescript": true,
+    "entry": "SPA"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.16.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@td/webpack-builder-react-xd": "^1.2.0",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.3.5"
+  }
+}
