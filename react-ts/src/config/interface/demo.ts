@@ -109,6 +109,21 @@ const a1: IReadonlyPreview = {
 // Record<T, K extends keyof any> 的作用是将 K 中所有的属性的值转化为 T 类型。
 
 
+type Record<K extends keyof any, T> = {
+  [P in K]: T;
+};
+interface Foo {
+  foo: string;
+}
+
+type Bar = "a" | "b" | "c";
+
+const x: Record<Bar, Foo> = {
+  a: { foo: '1' },
+  b: { foo: '1' },
+  c: { foo: '1' },
+};
+
 
 // Pick
 // Pick<T, K extends keyof T> 的作用是将某个类型中的子属性挑出来，变成包含这个类型部分属性的子类型。
